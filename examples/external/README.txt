@@ -5,7 +5,7 @@ Examples of using NetworkX with external libraries.
 
 In class
 --------
-Edit javascript_force.py
+Edit javascript_force.py, then run it `python3 javascript_force.py`
 (a) Use florentine_families_graph instead of barbell_graph
 (b) Calculate communities and centralities for each node
 (c) Add these attributes to the nodes (as illustrated in the 2nd link)

@@ -15,7 +15,7 @@ let myScaleSqrt = d3.scaleSqrt()
     .domain([0, 1])
     .rangeRound([1, 10])
 
-var color = d3.scaleOrdinal(d3.schemeCategory10)
+let color = d3.scaleOrdinal(d3.schemeCategory10)
 
 d3.json("force/force.json", function (error, graph) {
     if (error) throw error;
