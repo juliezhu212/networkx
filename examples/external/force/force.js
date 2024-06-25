@@ -11,7 +11,7 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-let myScaleSqrt = d3.scaleSqrt()
+let scale = d3.scaleSqrt()
     .domain([0, 1])
     .rangeRound([1, 10])
 
@@ -32,7 +32,7 @@ d3.json("force/force.json", function (error, graph) {
         .data(graph.nodes)
         .enter().append("circle")
         .attr("r", function(d) {
-            return myScaleSqrt(d.centrality)
+            return scale(d.centrality)
         })
         .style("fill", function(d) {
             return color(d.community)
